@@ -15,7 +15,7 @@ type GLTFResult = GLTF & {
 };
 
 export function Cross(props: JSX.IntrinsicElements["group"]) {
-  const { nodes, materials } = useGLTF("/models/cross.glb") as GLTFResult;
+  const { nodes, materials } = useGLTF("/models/cross.glb") as unknown as GLTFResult;
   return (
     <group {...props} dispose={null}>
       <mesh

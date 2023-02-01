@@ -15,7 +15,7 @@ type GLTFResult = GLTF & {
 };
 
 export function WaveA(props: JSX.IntrinsicElements["group"]) {
-  const { nodes, materials } = useGLTF("/models/wave_A.glb") as GLTFResult;
+  const { nodes, materials } = useGLTF("/models/wave_A.glb") as unknown as GLTFResult;
   return (
     <group {...props} dispose={null}>
       <mesh

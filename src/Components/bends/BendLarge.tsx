@@ -15,7 +15,7 @@ type GLTFResult = GLTF & {
 };
 
 export function BendLarge(props: JSX.IntrinsicElements["group"]) {
-  const { nodes, materials } = useGLTF("/models/bend_large.glb") as GLTFResult;
+  const { nodes, materials } = useGLTF("/models/bend_large.glb") as unknown as GLTFResult;
   return (
     <group {...props} dispose={null}>
       <mesh

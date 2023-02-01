@@ -15,7 +15,7 @@ type GLTFResult = GLTF & {
 };
 
 export function Straight(props: JSX.IntrinsicElements["group"]) {
-  const { nodes, materials } = useGLTF("/models/straight.glb") as GLTFResult;
+  const { nodes, materials } = useGLTF("/models/straight.glb") as unknown as GLTFResult;
   return (
     <group {...props} dispose={null}>
       <mesh

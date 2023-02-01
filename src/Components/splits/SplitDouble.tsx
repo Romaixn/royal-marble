@@ -15,7 +15,7 @@ type GLTFResult = GLTF & {
 };
 
 export function SplitDouble(props: JSX.IntrinsicElements["group"]) {
-  const { nodes, materials } = useGLTF("/models/split_double.glb") as GLTFResult;
+  const { nodes, materials } = useGLTF("/models/split_double.glb") as unknown as GLTFResult;
   return (
     <group {...props} dispose={null}>
       <mesh

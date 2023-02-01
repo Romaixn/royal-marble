@@ -17,7 +17,7 @@ type GLTFResult = GLTF & {
 export function HelixLargeHalfLeft(props: JSX.IntrinsicElements["group"]) {
   const { nodes, materials } = useGLTF(
     "/models/helix_large_half_left.glb"
-  ) as GLTFResult;
+  ) as unknown as GLTFResult;
   return (
     <group {...props} dispose={null}>
       <mesh

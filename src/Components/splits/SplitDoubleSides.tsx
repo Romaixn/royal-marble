@@ -15,7 +15,7 @@ type GLTFResult = GLTF & {
 };
 
 export function SplitDoubleSides(props: JSX.IntrinsicElements["group"]) {
-  const { nodes, materials } = useGLTF("/models/split_double_sides.glb") as GLTFResult;
+  const { nodes, materials } = useGLTF("/models/split_double_sides.glb") as unknown as GLTFResult;
   return (
     <group {...props} dispose={null}>
       <mesh

@@ -15,7 +15,7 @@ type GLTFResult = GLTF & {
 };
 
 export function SlantC(props: JSX.IntrinsicElements["group"]) {
-  const { nodes, materials } = useGLTF("/models/slant_long_C.glb") as GLTFResult;
+  const { nodes, materials } = useGLTF("/models/slant_long_C.glb") as unknown as GLTFResult;
   return (
     <group {...props} dispose={null}>
       <mesh

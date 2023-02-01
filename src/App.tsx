@@ -4,6 +4,7 @@ import { Loader, Sky, Stage, OrbitControls } from '@react-three/drei'
 import { Debug, Physics } from '@react-three/rapier'
 import { useControls } from 'leva'
 import { Perf } from 'r3f-perf'
+import { Tree } from './Components/decorations/Tree'
 
 function App() {
   const { debug, perf } = useControls({
@@ -24,6 +25,8 @@ function App() {
             environment="city">
             <Physics>
               { debug && <Debug /> }
+
+              <Tree />
             </Physics>
           </Stage>
 

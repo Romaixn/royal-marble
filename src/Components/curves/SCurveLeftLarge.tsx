@@ -15,7 +15,7 @@ type GLTFResult = GLTF & {
 };
 
 export function SCurveLeftLarge(props: JSX.IntrinsicElements["group"]) {
-  const { nodes, materials } = useGLTF("/models/s-curve_left_large.glb") as GLTFResult;
+  const { nodes, materials } = useGLTF("/models/s-curve_left_large.glb") as unknown as GLTFResult;
   return (
     <group {...props} dispose={null}>
       <mesh

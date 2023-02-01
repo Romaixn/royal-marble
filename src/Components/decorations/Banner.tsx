@@ -15,7 +15,7 @@ type GLTFResult = GLTF & {
 };
 
 export function Banner(props: JSX.IntrinsicElements["group"]) {
-  const { nodes, materials } = useGLTF("/models/banner.glb") as GLTFResult;
+  const { nodes, materials } = useGLTF("/models/banner.glb") as unknown as GLTFResult;
   return (
     <group {...props} dispose={null}>
       <mesh

@@ -15,7 +15,7 @@ type GLTFResult = GLTF & {
 };
 
 export function BumpA(props: JSX.IntrinsicElements["group"]) {
-  const { nodes, materials } = useGLTF("/models/bump_A.glb") as GLTFResult;
+  const { nodes, materials } = useGLTF("/models/bump_A.glb") as unknown as GLTFResult;
   return (
     <group {...props} dispose={null}>
       <mesh

@@ -15,7 +15,7 @@ type GLTFResult = GLTF & {
 };
 
 export function RampLongD(props: JSX.IntrinsicElements["group"]) {
-  const { nodes, materials } = useGLTF("/models/ramp_long_D.glb") as GLTFResult;
+  const { nodes, materials } = useGLTF("/models/ramp_long_D.glb") as unknown as GLTFResult;
   return (
     <group {...props} dispose={null}>
       <mesh

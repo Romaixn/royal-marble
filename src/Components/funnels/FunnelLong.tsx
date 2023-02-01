@@ -15,7 +15,7 @@ type GLTFResult = GLTF & {
 };
 
 export function FunnelLong(props: JSX.IntrinsicElements["group"]) {
-  const { nodes, materials } = useGLTF("/models/funnel_long.glb") as GLTFResult;
+  const { nodes, materials } = useGLTF("/models/funnel_long.glb") as unknown as GLTFResult;
   return (
     <group {...props} dispose={null}>
       <mesh

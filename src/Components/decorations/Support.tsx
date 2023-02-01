@@ -13,7 +13,7 @@ type GLTFResult = GLTF & {
 };
 
 export function Support(props: JSX.IntrinsicElements["group"]) {
-  const { nodes, materials } = useGLTF("/models/support.glb") as GLTFResult;
+  const { nodes, materials } = useGLTF("/models/support.glb") as unknown as GLTFResult;
   return (
     <group {...props} dispose={null}>
       <mesh

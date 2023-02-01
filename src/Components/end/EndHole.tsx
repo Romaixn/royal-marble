@@ -15,7 +15,7 @@ type GLTFResult = GLTF & {
 };
 
 export function EndHole(props: JSX.IntrinsicElements["group"]) {
-  const { nodes, materials } = useGLTF("/models/end_hole_rounded.glb") as GLTFResult;
+  const { nodes, materials } = useGLTF("/models/end_hole_rounded.glb") as unknown as GLTFResult;
   return (
     <group {...props} dispose={null}>
       <mesh
