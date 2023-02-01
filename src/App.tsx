@@ -30,7 +30,10 @@ function App() {
             </Physics>
           </Stage>
 
-          <OrbitControls makeDefault />
+          <OrbitControls
+            makeDefault
+            maxPolarAngle={Math.PI / 2}
+          />
           <Sky distance={450000} sunPosition={[0, 1, 0]} inclination={0} azimuth={0.25} />
         </Suspense>
       </Canvas>
