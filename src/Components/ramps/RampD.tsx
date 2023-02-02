@@ -2,6 +2,7 @@ import * as THREE from "three";
 import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 import { GLTF } from "three-stdlib";
+import { RigidBody } from "@react-three/rapier";
 
 type GLTFResult = GLTF & {
   nodes: {
@@ -17,20 +18,20 @@ type GLTFResult = GLTF & {
 export function RampD(props: JSX.IntrinsicElements["group"]) {
   const { nodes, materials } = useGLTF("/models/rampStart_D.glb") as unknown as GLTFResult;
   return (
-    <group {...props} dispose={null}>
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Mesh_rampStart_D.geometry}
-        material={materials.green}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Mesh_rampStart_D_1.geometry}
-        material={materials.yellow}
-      />
-    </group>
+      <group {...props} dispose={null}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Mesh_rampStart_D.geometry}
+          material={materials.green}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Mesh_rampStart_D_1.geometry}
+          material={materials.yellow}
+        />
+      </group>
   );
 }
 
