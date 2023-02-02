@@ -43,9 +43,8 @@ function App() {
           <RigidBody
             colliders="ball"
             friction={0}
-            restitution={0.25}
-            linearDamping={0.5}
-            angularDamping={0.5}
+            restitution={0}
+            linearDamping={0.25}
           >
             <mesh position-y={ 22 } position-z={ 9 } castShadow receiveShadow>
               <sphereGeometry args={ [ 0.30, 16, 16 ] } />
@@ -54,40 +53,39 @@ function App() {
           </RigidBody>
 
           <BannerHangingHigh position-y={20} position-z={9.4} />
-          <RigidBody type="fixed" colliders="trimesh">
+          <RigidBody type="fixed" friction={0} restitution={0} colliders="trimesh">
             <RampD position-y={19} position-z={9} rotation-y={Math.PI} />
           </RigidBody>
-          <RigidBody type="fixed" colliders="trimesh"><SlantD position-y={17.5} position-z={7.5} rotation-y={Math.PI} /></RigidBody>
-          <RigidBody type="fixed" colliders="trimesh"><Funnel position-y={17.5} position-z={6} /></RigidBody>
-          <RigidBody type="fixed" colliders="trimesh"><StraightWide position-y={17.5} position-z={5} /></RigidBody>
-          <RigidBody type="fixed" colliders="trimesh"><StraightWide position-y={17.5} position-z={4} /></RigidBody>
-          <RigidBody type="fixed" colliders="trimesh"><FunnelLong position-y={17.5} position-z={2} rotation-y={Math.PI} /></RigidBody>
-          <RigidBody type="fixed" colliders="trimesh"><HelixLargeLeft position-y={15.5} position-z={0.5} position-x={2.5} rotation-y={Math.PI / 2} /></RigidBody>
-          <RigidBody type="fixed" colliders="trimesh"><SlantD position-y={14} position-z={-0.5} rotation-y={Math.PI} /></RigidBody>
-          <RigidBody type="fixed" colliders="trimesh"><SlantD position-y={12.5} position-z={-2.5} rotation-y={Math.PI} /></RigidBody>
-          <RigidBody type="fixed" colliders="trimesh"><Straight position-y={12.5} position-z={-5} /></RigidBody>
-          <RigidBody type="fixed" colliders="trimesh"><Straight position-y={12.5} position-z={-4} /></RigidBody>
-          <BannerHangingHigh position-y={12.5} position-z={-4} />
-          <RigidBody type="fixed" colliders="trimesh"><Curve position-y={12.5} position-x={-0.5} position-z={-6.5} rotation-y={-Math.PI / 2} /></RigidBody>
-          <RigidBody type="fixed" colliders="trimesh"><RampD position-y={11.5} position-z={-7} position-x={-2.15} rotation-y={-Math.PI / 2} /></RigidBody>
-          <RigidBody type="fixed" colliders="trimesh"><Curve position-y={11.5} position-z={-7.5} position-x={-3.5} rotation-y={Math.PI / 2} /></RigidBody>
+          <RigidBody type="fixed" friction={0} restitution={0} colliders="trimesh"><SlantD position-y={17.5} position-z={7.5} rotation-y={Math.PI} /></RigidBody>
+          <RigidBody type="fixed" friction={0} restitution={0} colliders="trimesh"><Funnel position-y={17.5} position-z={6} /></RigidBody>
+          <RigidBody type="fixed" friction={0} restitution={0} colliders="trimesh"><StraightWide position-y={17.5} position-z={5} /></RigidBody>
+          <RigidBody type="fixed" friction={0} restitution={0} colliders="trimesh"><StraightWide position-y={17.5} position-z={4} /></RigidBody>
+          <RigidBody type="fixed" friction={0} restitution={0} colliders="trimesh"><FunnelLong position-y={17.5} position-z={2} rotation-y={Math.PI} /></RigidBody>
+          <RigidBody type="fixed" friction={0} restitution={0} colliders="trimesh"><HelixLargeLeft position-y={15.5} position-z={0.5} position-x={2.5} rotation-y={Math.PI / 2} /></RigidBody>
+          <RigidBody type="fixed" friction={0} restitution={0} colliders="trimesh"><SlantD position-y={14} position-z={-0.5} rotation-y={Math.PI} /></RigidBody>
+          <RigidBody type="fixed" friction={0} restitution={0} colliders="trimesh"><SlantD position-y={12.5} position-z={-2.5} rotation-y={Math.PI} /></RigidBody>
+          <RigidBody type="fixed" friction={0} restitution={0} colliders="trimesh"><Straight position-y={12.5} position-z={-5} /></RigidBody>
+          <RigidBody type="fixed" friction={0} restitution={0} colliders="trimesh"><Straight position-y={12.5} position-z={-4} /></RigidBody>
+          <RigidBody type="fixed" friction={0} restitution={0} colliders="trimesh"><Curve position-y={12.5} position-x={-0.5} position-z={-6.5} rotation-y={-Math.PI / 2} /></RigidBody>
+          <RigidBody type="fixed" friction={0} restitution={0} colliders="trimesh"><RampD position-y={11.5} position-z={-7} position-x={-2.15} rotation-y={-Math.PI / 2} /></RigidBody>
+          <RigidBody type="fixed" friction={0} restitution={0} colliders="trimesh"><Curve position-y={11.5} position-z={-7.5} position-x={-3.5} rotation-y={Math.PI / 2} /></RigidBody>
 
-          <RigidBody type="fixed" colliders="trimesh"><SlantD position-y={10} position-z={-9.5} position-x={-4} rotation-y={Math.PI} /></RigidBody>
-          <RigidBody type="fixed" colliders="trimesh"><HelixLargeRight position-y={8} position-z={-10.5} position-x={-6.5} rotation-y={-Math.PI / 2} /></RigidBody>
-          <RigidBody type="fixed" colliders="trimesh"><BendMedium position-y={8} position-z={-11.5} position-x={-2.5} rotation-y={-Math.PI / 2} /></RigidBody>
-          <RigidBody type="fixed" colliders="trimesh"><RampLongC position-y={7} position-z={-9.5} position-x={-1} /></RigidBody>
-          <RigidBody type="fixed" colliders="trimesh"><EndHole position-y={7} position-z={-9} position-x={1} /></RigidBody>
-          <RigidBody type="fixed" colliders="trimesh"><SplitDouble position-y={7} position-z={-7.5} /></RigidBody>
-          <RigidBody type="fixed" colliders="trimesh"><SlantC position-y={6} position-z={-5.5} /></RigidBody>
-          <RigidBody type="fixed" colliders="trimesh"><SlantC position-y={5} position-z={-3.5} /></RigidBody>
-          <RigidBody type="fixed" colliders="trimesh"><SCurveLeftLarge position-y={5} position-z={0} position-x={2.5} /></RigidBody>
-          <RigidBody type="fixed" colliders="trimesh"><HelixLargeRight position-y={3} position-z={2.5} position-x={7.5} rotation-y={Math.PI / 2} /></RigidBody>
-          <RigidBody type="fixed" colliders="trimesh"><RampLongC position-y={2} position-z={3.5} position-x={5} /></RigidBody>
-          <RigidBody type="fixed" colliders="trimesh"><BendLarge position-y={2} position-z={6} position-x={2.5} rotation-y={Math.PI / 2} /></RigidBody>
-          <RigidBody type="fixed" colliders="trimesh"><Funnel position-z={4} position-y={2} /></RigidBody>
-          <RigidBody type="fixed" colliders="trimesh"><FunnelLong rotation-y={Math.PI} position-z={2} position-y={2} /></RigidBody>
-          <RigidBody type="fixed" colliders="trimesh"><HelixLeft position-z={0.5} position-x={1.5} rotation-y={Math.PI / 2} /></RigidBody>
-          <RigidBody type="fixed" colliders="trimesh"><EndHole /></RigidBody>
+          <RigidBody type="fixed" friction={0} restitution={0} colliders="trimesh"><SlantD position-y={10} position-z={-9.5} position-x={-4} rotation-y={Math.PI} /></RigidBody>
+          <RigidBody type="fixed" friction={0} restitution={0} colliders="trimesh"><HelixLargeRight position-y={8} position-z={-10.5} position-x={-6.5} rotation-y={-Math.PI / 2} /></RigidBody>
+          <RigidBody type="fixed" friction={0} restitution={0} colliders="trimesh"><BendMedium position-y={8} position-z={-11.5} position-x={-2.5} rotation-y={-Math.PI / 2} /></RigidBody>
+          <RigidBody type="fixed" friction={0} restitution={0} colliders="trimesh"><RampLongC position-y={7} position-z={-9.5} position-x={-1} /></RigidBody>
+          <RigidBody type="fixed" friction={0} restitution={0} colliders="trimesh"><EndHole position-y={7} position-z={-9} position-x={1} /></RigidBody>
+          <RigidBody type="fixed" friction={0} restitution={0} colliders="trimesh"><SplitDouble position-y={7} position-z={-7.5} /></RigidBody>
+          <RigidBody type="fixed" friction={0} restitution={0} colliders="trimesh"><SlantC position-y={6} position-z={-5.5} /></RigidBody>
+          <RigidBody type="fixed" friction={0} restitution={0} colliders="trimesh"><SlantC position-y={5} position-z={-3.5} /></RigidBody>
+          <RigidBody type="fixed" friction={0} restitution={0} colliders="trimesh"><SCurveLeftLarge position-y={5} position-z={0} position-x={2.5} /></RigidBody>
+          <RigidBody type="fixed" friction={0} restitution={0} colliders="trimesh"><HelixLargeRight position-y={3} position-z={2.5} position-x={7.5} rotation-y={Math.PI / 2} /></RigidBody>
+          <RigidBody type="fixed" friction={0} restitution={0} colliders="trimesh"><RampLongC position-y={2} position-z={3.5} position-x={5} /></RigidBody>
+          <RigidBody type="fixed" friction={0} restitution={0} colliders="trimesh"><BendLarge position-y={2} position-z={6} position-x={2.5} rotation-y={Math.PI / 2} /></RigidBody>
+          <RigidBody type="fixed" friction={0} restitution={0} colliders="trimesh"><Funnel position-z={4} position-y={2} /></RigidBody>
+          <RigidBody type="fixed" friction={0} restitution={0} colliders="trimesh"><FunnelLong rotation-y={Math.PI} position-z={2} position-y={2} /></RigidBody>
+          <RigidBody type="fixed" friction={0} restitution={0} colliders="trimesh"><HelixLeft position-z={0.5} position-x={1.5} rotation-y={Math.PI / 2} /></RigidBody>
+          <RigidBody type="fixed" friction={0} restitution={0} colliders="trimesh"><EndHole /></RigidBody>
         </Physics>
       </Stage>
 
