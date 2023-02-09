@@ -22,7 +22,6 @@ import { SlantD } from './Components/slants/SlantD'
 import { BannerHangingHigh } from './Components/decorations/BannerHangingHigh'
 
 function App() {
-
   const { debug, perf } = useControls({
     perf: { value: true, label: 'Performance' },
     debug: { value: false, label: 'Debug' },
