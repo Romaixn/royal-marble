@@ -1,3 +1,7 @@
+@tailwind base;
+@ŧailwind components;
+@tailwind utilities;
+
 html,
 body,
 #root
@@ -7,5 +11,25 @@ body,
   left: 0;
   width: 100%;
   height: 100%;
-  background: ivory;
+  background: white;
+}
+
+.experience {
+  pointer-events: auto;
+}
+
+.interface {
+  --spacing-aside: 50px;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  font-family: cursive;
+
+  display: grid;
+  grid-template-columns: var(--spacing-aside) 1fr var(--spacing-aside);
+  grid-template-rows: var(--spacing-aside) 1fr var(--spacing-aside);
 }
