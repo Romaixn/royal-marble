@@ -2,11 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion'
 import { CubeIcon } from '@heroicons/react/24/solid';
 
-interface ButtonProps {
-  children: JSX.Element | JSX.Element[];
-}
-
-function Navigation({ children }: ButtonProps): JSX.Element {
+function Navigation(): JSX.Element {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
